@@ -29,10 +29,14 @@ with st.form("formulario_perfil"):
 # Exibir resultado
 if submit:
     st.markdown("---")
-    st.image()
-    st.subheader("📄 Resultado do Cadastro")
+    st.subheader("😁 Seu perfil")
     st.write(f"**Nome:** {nome}")
     st.write(f"**Idade:** {idade}")
     st.write(f"**Gênero:** {genero}")
     st.write(f"**Pronomes:** {pronomes}")
     st.write(f"**Interesses:** {[i.strip() for i in interesses.split(',') if i.strip()]}")
+
+     # Exibir imagem, se houver
+    if imagem is not None:
+        img = Image.open(imagem)
+        st.image(img, caption="Sua imagem", use_column_width=True)
