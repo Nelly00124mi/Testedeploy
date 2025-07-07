@@ -36,7 +36,7 @@ if submit:
     st.write(f"**Pronomes:** {pronomes}")
     st.write(f"**Interesses:** {[i.strip() for i in interesses.split(',') if i.strip()]}")
 
-     # Exibir imagem, se houver
     if imagem is not None:
         img = Image.open(imagem)
-        st.image(img, caption="Sua imagem", use_column_width=True)
+        st.image(img, caption="Sua imagem", use_container_width=True)
+   
