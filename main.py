@@ -17,7 +17,7 @@ else:
     # Campos do formulário
 with st.form("formulario_perfil"):
     nome = st.text_input("Nome completo") #Entrada de texto
-    idade = st.number_input("Idade", min_value=0, max_value=150, step=1) #Entrada de número
+    idade = st.number_input("Idade", min_value=0, max_value=150, step=1) #Entrada de número. Step1 ( diminui ou aumenta idade de 1 em 1)
     
     genero = st.selectbox("Gênero", ["Selecione", "Feminino", "Masculino", "Não binário", "Prefiro não dizer", "Outro"]) #Cria uma caixa de seleção
     pronomes = st.text_input("Pronomes (ex: ela/dela, ele/dele, elu/delu)")
@@ -29,6 +29,7 @@ with st.form("formulario_perfil"):
 # Exibir resultado
 if submit:
     st.markdown("---")
+    st.image()
     st.subheader("📄 Resultado do Cadastro")
     st.write(f"**Nome:** {nome}")
     st.write(f"**Idade:** {idade}")
