@@ -10,7 +10,7 @@ st.title("Apresentação")
 imagem = st.file_uploader("Adicione uma imagem de perfil", type=["png", "jpng", "jpeg" ]) #Armazena o arquivo na variavel imagem: Adiciona o local para colocar a imagem e a mensagem, e o tipo de arquivo suportado
 if imagem is not None:  #verifica se foi adicionada uma imagem
     img = Image.open(imagem)  #abre o arquivo de imagem usando a biblioteca PIL (Python Imaging Library).
-    st.image(img, caption="Foto de perfil", use_column_width=True) #exibe a imagem na tela/ é a imagem que foi carregada./ adiciona uma legenda abaixo da imagem./ faz a imagem se ajustar automaticamente à largura da coluna da interface.
+    st.image(img, caption="Foto de perfil", use_container_width=True) #exibe a imagem na tela/ é a imagem que foi carregada./ adiciona uma legenda abaixo da imagem./ faz a imagem se ajustar automaticamente à largura da coluna da interface.
 else:
     st.info("🚨 Faça o upload de uma imagem para começar.") #executa esse bloco se nenhum arquivo tiver sido carregado./ exibe uma mensagem informativa em azul, alertando o usuário.
 
